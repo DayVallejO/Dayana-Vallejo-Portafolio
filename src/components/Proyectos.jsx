@@ -19,6 +19,11 @@ export default function Proyectos() {
                 <h3>{p.nombre}</h3>
                 <p className="texto-sec">{p.descripcion}</p>
                 <p className="mono acento-suave">{p.tecnologias.join(' · ')}</p>
+                {p.colaboradores && (
+                  <p className="colaboradores">
+                    <span className="tarjeta-etiqueta">EQUIPO</span> Con {p.colaboradores}
+                  </p>
+                )}
                 {(p.demo || p.codigo) && (
                   <div className="proyecto-enlaces">
                     {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">Ver demo</a>}

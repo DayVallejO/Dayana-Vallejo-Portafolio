@@ -150,19 +150,46 @@ a:focus-visible, button:focus-visible {
   overflow: hidden;
   padding: 120px 0 220px;
 }
-.hero-contenido {
+.hero-grid {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 48px;
+}
+.hero-contenido {
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+/* Foto con el sol synthwave detrás */
+.hero-foto-wrap {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+}
+.hero-foto {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--rosa);
+  box-shadow: 0 0 0 6px var(--fondo), 0 0 36px rgba(var(--rosa-rgb), 0.6);
+  z-index: 2;
+  /* Blanco y negro con contraste para que combine con el neón */
+  filter: grayscale(1) contrast(1.15) brightness(1.05);
 }
 .cursor { animation: parpadeo 1s steps(1) infinite; }
 @keyframes parpadeo { 50% { opacity: 0; } }
 .hero-nombre {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(52px, 11vw, 156px);
+  font-size: clamp(48px, 9vw, 128px);
   line-height: 0.95;
   color: #ffd1ea;
   text-shadow: 0 0 14px rgba(var(--rosa-rgb), 0.9), 0 0 42px rgba(var(--brillo), 0.7);
@@ -197,10 +224,10 @@ a:focus-visible, button:focus-visible {
 }
 .sol {
   position: absolute;
-  right: 8%;
-  top: 90px;
-  width: 300px;
-  height: 300px;
+  right: 0;
+  top: 0;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   background: linear-gradient(180deg, var(--sol-1), var(--rosa) 50%, var(--primario));
   -webkit-mask-image: repeating-linear-gradient(180deg, #000 0 18px, transparent 18px 26px);
@@ -362,6 +389,8 @@ a:focus-visible, button:focus-visible {
   flex-grow: 1;
 }
 .proyecto h3 { font-size: 22px; }
+.colaboradores { font-size: 14px; line-height: 1.5; color: var(--texto-sec); }
+.colaboradores .tarjeta-etiqueta { margin-right: 6px; }
 .proyecto-enlaces { display: flex; gap: 16px; margin-top: auto; font-weight: 700; font-size: 15px; }
 .proyecto-enlaces a { min-height: 44px; display: inline-flex; align-items: center; }
 
@@ -447,7 +476,10 @@ a:focus-visible, button:focus-visible {
   }
   .nav-links.abierto { display: flex; }
   .hero { padding: 80px 0 180px; }
-  .sol { width: 180px; height: 180px; right: -40px; top: 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-foto-wrap { order: -1; width: 220px; height: 220px; }
+  .hero-foto { width: 170px; height: 170px; }
+  .sol { width: 180px; height: 180px; }
   .seccion { padding: 80px 0; }
 }
 

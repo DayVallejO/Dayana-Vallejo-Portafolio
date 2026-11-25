@@ -59,10 +59,11 @@ export const proyectos = [
     tipo: 'tienda',
     origen: 'Generation · Grupo 5',
     descripcion:
-      'Tienda en línea de kits hecha en equipo. Diseñé la página de registro: formulario con validación de correo, confirmación de contraseña y mensajes de error claros, en versión computador y celular.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    demo: '',
-    codigo: '',
+      'E-commerce de kits temáticos que reúne en un solo lugar todo lo necesario para empezar un hobby o proyecto. Proyecto final de Generation: trabajé en frontend y backend, y diseñé la página de registro con validación del formulario.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap 5', 'localStorage', 'Figma'],
+    colaboradores: 'Cristhian Beltrán, Diana Ocampo, Cristian Rojas y Juliana Bernal',
+    demo: 'https://kit-box-team.github.io/kit-box/',
+    codigo: 'https://github.com/kit-box-team/kit-box',
   },
   {
     nombre: 'TrendyShop',
@@ -70,6 +71,7 @@ export const proyectos = [
     origen: 'Generation · Hackathon 1',
     descripcion:
       'Tienda en línea construida en equipo durante el primer hackathon de Generation Colombia. Me encargué de la sección "Quiénes somos".',
+    colaboradores: 'Narciris, Brandon, Diego y Yesid',
     tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     demo: '',
     codigo: '',
@@ -78,9 +80,10 @@ export const proyectos = [
     nombre: 'Los Sims 4 – Expansion Store',
     tipo: 'tienda',
     origen: 'Proyecto en equipo',
-    descripcion: 'Tienda frontend de expansiones de Los Sims 4, hecha en equipo.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    demo: '',
+    descripcion:
+      'Tienda web de paquetes de expansión de Los Sims 4, hecha en equipo. Tiene registro e inicio de sesión, carrito, perfil de usuario, panel de administrador, modo claro/oscuro y versión en español e inglés.',
+    tecnologias: ['React', 'Vite', 'CSS', 'API REST'],
+    demo: 'https://nodo404.vercel.app/',
     codigo: '',
   },
   {
